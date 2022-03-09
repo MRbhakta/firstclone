@@ -1,0 +1,386 @@
+*{ margin: 0 auto;
+    box-sizing: border-box;
+   
+}
+/* navbar start here */
+.navbar{
+    background-color:#38B6FF ;
+    padding: 1% 7%;
+    text-align: center;
+    
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+p{
+    text-align: justify;
+}
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+img{
+    width: 100px;
+    height: 100px;
+    
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/**/
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+/* for mobile*/
+[class*="col-"]{
+    width: 100%;
+}
+
+/**/
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.navbar h1{
+    color: white;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 4rem;
+}
+.nav-menu{
+    display: flex;
+flex-direction: column;
+}
+.nav-menu a{
+ background-color: skyblue;
+ padding: 10px;
+ margin: 7px;
+ border-radius: 10px;
+}
+.nav-menu a:hover{
+    background-color: grey;
+}
+/* navbar end here */
+
+/* porfile design start here */
+.profile{
+    padding: 100px 20px;
+    position: relative;
+    text-align: center;
+}
+.profile .top-weather{
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    transition: transform 3s;
+}
+.profile .top-weather:hover{
+    transform: rotate(360deg);
+}
+.profile-des h1{
+font-family:'Gideon Roman', cursive;
+
+}
+.profile-des p{
+    width: 90%;
+    color: gray;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px auto 20px auto;
+}
+.profile .buttom-weather{
+    position: absolute;
+    left: 50px;
+    bottom: 5px;
+    transition: transform 3s;
+}
+.profile .buttom-weather:hover{
+    transform: rotate(360deg);
+}
+.profile::after{
+    columns: '';
+    display: table;
+    clear: both;
+
+}
+/* porfile design end here */
+
+/* about me start here */
+.about-me{
+    background-color: darkcyan;
+    padding: 1% 7%;
+    color: white;
+    text-align: center;
+    font-family: 'Paytone One', sans-serif;
+}
+.dotted-hr{
+    width: 20%;
+    border: dotted 6px white;
+    border-bottom: none;
+    margin: 20px auto;
+}
+
+.about-me-image img{
+border: 5px solid orange;
+border-radius: 10px;
+height: 150;
+width: auto;
+}
+.about-me p{
+    text-align: center;
+    font-size: 1.2rem;
+    margin:10px;
+}
+.my-cv{
+color: white;
+background-color: black;
+font-weight: bold;
+padding: 15px;
+border-radius: 10%;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+cursor: pointer;
+}
+.my-cv:hover{
+    background-color: blue;
+}
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+
+/* about me end here */
+
+/* fresher stat */
+.fresher{
+    padding: 1% 7%;
+}
+.fresher .card{
+    background-color: grey;
+    border-radius: 10px;
+    padding: 10px;
+    
+    height: 700px;
+}
+.fresher .card:hover{
+    box-shadow: 0 4px 8px black;
+}
+.card-icon{
+    text-align: center;
+
+}
+.rounded-img{
+    border: 4px solid black;
+    border-radius: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.card-title h2{
+    background-color: darkgrey;
+    margin: 10px 0;
+    color: white;
+    padding: 10px;
+}
+.card-des li{
+   margin: 10px 0;
+    
+}
+.fresher::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+/* fresher end */
+
+/* skill start */
+.skill-container{
+    padding-right: 45px;
+}
+.skill-container li{
+    list-style: none;
+    font-weight: bold;
+    margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+.skill-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 100%;
+    height: 10px;
+left: 0px;
+    background-color: lightgrey;
+border-radius: 100px;
+}
+.skill-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 0%;
+    height: 10px;
+    left: 0px;
+    background-color: lightseagreen;
+border-radius: 100px;
+animation-duration: 2s;
+animation-delay: 1s;
+animation-timing-function: linear;
+/* animation-iteration-count: o; */
+animation-fill-mode: forwards;
+}
+
+.skill-container li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 90%;
+    }
+}
+.skill-container li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 60%;
+    }
+}
+.skill-container li.js::after{
+    animation-name: js;
+}
+@keyframes js{
+    to{
+        width: 70%;
+    }
+}
+.skill-container li.jq::after{
+    animation-name: jq;
+}
+@keyframes jq{
+    to{
+        width: 30%;
+    }
+}
+.skill-container li.mango::after{
+    animation-name: mango;
+}
+@keyframes mango{
+    to{
+        width: 60%;
+    }
+}
+.skill-container li.python::after{
+    animation-name: python;
+}
+@keyframes python{
+    to{
+        width: 55%;
+    }
+}
+.skill-container li.c::after{
+    animation-name: c;
+}
+@keyframes c{
+    to{
+        width: 75%;
+    }
+}
+.skill-container li.java::after{
+    animation-name: java;
+}
+@keyframes java{
+    to{
+        width: 73%;
+    }
+}
+.skill-container li.apk::after{
+    animation-name: apk;
+}
+@keyframes apk{
+    to{
+        width: 83%;
+    }
+}
+.fresher::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+/* skill end */
+/* achivment contact start */
+.achivment-contract{
+    padding: 2% 7%;
+    background-color: #38B6FF;
+    color: white;
+}
+.contact{
+    text-align: center;
+}
+.contact p{
+    margin: 20;
+}
+.contact button{
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    width: 100px;
+}
+.contact input, textarea{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    resize: none;  
+}
+
+/* achivment contact end */
+/*Button start*/
+.btn{
+    text-align: center;
+    border: none; border-radius: 25px; font-size: 32px; padding: 5px; margin: 10px; width: 50px;
+}
+.btn:hover{
+    background-color: grey;
+}
+.achivment-contract::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/*Button end*/
+
+/* fotter start here*/
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.footer-menu a{
+    display: block;
+    margin: 15px  0;
+}
+.footer-menu a:hover{
+    color: grey;
+}
+.footer::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* fotter end here */
+
+
